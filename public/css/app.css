@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css);
+
+img{
+  margin-top: 60px;
+  height: 778px;
+  width: 70%
+}
+
+nav {
+  padding: 20px 0;
+}
+.navbar-toggler-icon{
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+}
+.navbar-brand {
+  color: #003c80;
+  text-transform: uppercase;
+  float:left;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 0 15px;
+}
+
+.nav-link {
+  font-size: 24px;
+  color: #629de0;
+  text-transform: uppercase;
+  float:left;
+  padding: 5px;
+}
+.nav-link:hover, .navbar-brand:hover{
+  color: #000;
+}
+.nav-item{
+  padding: 0 15px;
+}
+.content{
+  white-space: nowrap;
+  border: none;
+  background-color:transparent;
+  text-align: center;
+  float: right;
+  margin-top: 200px;
+  text-align: center;
+  padding: 10px 20px;
+  margin-right: 70px;
+}
+.order{
+  color: #fff;;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20px;
+  border: none;
+  margin-bottom: 82px;
+  display: inline-block;
+}
+.order:hover {
+  background-color: #003c80;
+}
+.slogan {
+  font-size: 27px;
+  color:#003c80;
+  text-align: center;
+  /* padding: 10px 20px; */
+  margin-bottom: 10px;
+}
+.contacts{
+  text-transform: uppercase;
+  bottom: 0;
+  /* padding: 10px 20px; */
+  font-size: 20px;
+  color:#003c80;;
+  text-align: center;
+}
+
+.card{
+  margin-top: 60px;
+}
