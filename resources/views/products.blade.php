@@ -40,8 +40,9 @@
             <div class="col-sm-9">
               <h1 align="center">{{ $bott->name }}</H1>
               <h3 align="center">KSH/={{ $bott->price }}</h3>
-              <a href="#"><button type="button" class="btn btn-outline-danger">Add To Cart</button></a>
+              <a href="{{ url('prodMaster', $bott->productID) }}"><button type="button" class="btn btn-outline-danger">Add To Cart</button></a>
               <button type="button" class="btn btn-outline-Success" >Buy  Now</button>
+              <button class="btn btn-outline-info">Request Refill</button>
               <br><br>
               <h4>{{$bott->description}}</h4>
             </div>
