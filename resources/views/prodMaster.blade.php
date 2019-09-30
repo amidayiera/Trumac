@@ -11,7 +11,7 @@
   <!-- Links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link 1</a>
+                  <a class="nav-link" href="#">Link x1</a>
                 </li>
                 <li class="nav-item">
                    <a class="nav-link" href="#">Link 2</a>
@@ -21,35 +21,39 @@
                 <li class="nav-item dropdown">
                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Dropdown link</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Hey</a>
                   <a class="dropdown-item" href="#">Link 2</a>
                   <a class="dropdown-item" href="#">Link 3</a>
                 </div>
               </li>
             </ul>
   </nav>
-  <h1 align="center" class="jumbotron">Our Products</h1> 
-  <div class="container">
-   @foreach($bottles as $bott) 
-  
-      <div align="center">
-          <div class="row"> 
-            <div class="col-sm-3">
-              <img class="img-thumbnail"src = "{{ asset($bott->image) }}" width="300px" height="400px"> 
-            </div>  
-            <div class="col-sm-9">
-              <h1 align="center">{{ $bott->name }}</H1>
-              <h3 align="center">KSH/={{ $bott->price }}</h3>
-              <a href="#"><button type="button" class="btn btn-outline-danger">Add To Cart</button></a>
-              <button type="button" class="btn btn-outline-Success" >Buy  Now</button>
-              <br><br>
-              <h4>{{$bott->description}}</h4>
+  <body>
+    @foreach($details as $detail)
+       
+   
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{{asset($detail->image)}}" width="450px" height="450px">
             </div>
-          </div>
-
-      </div>
-      <br><br>
-  @endforeach
-  </div> 
+            <div class="col-md-9" align="center">
+                    <br><br><br><br>
+            <h1 align="center">{{ $detail->name }}</H1>
+                        <br><br><br>
+              <h3 align="center">KSH/ {{ $detail->price }}</h3>
+              <br><br><br>
+              <button type="button" class="btn btn-outline-danger">Add To Cart</button>
+              <button type="button" class="btn btn-outline-Success" >Buy  Now</button>
+              
+              
+            </div>
+        </div>
+        
+            <div class="jumbotron" align="center">
+                <h1> Description:</h1>
+                <h4>{{ $detail->description }}</h4>
+            
+        </div>
+     @endforeach
   </body>
 </html> 
