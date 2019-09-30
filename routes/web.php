@@ -25,8 +25,6 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
         Route::get('/', 'AdminController@index')->name('admin.dashboard');
     });
 
-    // CAN ALSO BE WRITTEN LIKE THIS :
+Route::get('/products','productController@showProducts');
 
-// Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
-// Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-// Route::get('/admin/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login.submit');
+Route::get('/prodMaster/{id}','productController@showProductsById');

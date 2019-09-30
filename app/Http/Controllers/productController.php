@@ -19,8 +19,9 @@ class productController extends Controller
         return view('products',['bottles'=>$bottles]);
     }
     public function showProductsById($id){
+
         $details=DB::select('select * from products');
-        print_r($details);
+      
         if($id==$details->productID){
             $detail=$details;
         }else{
@@ -28,6 +29,9 @@ class productController extends Controller
         }
           print_r($detail);
         return view('prodMaster',['details'=>$details]);
+       
+       $details = DB::table('products')->where('productID', $id)->get();
+       return view('prodMaster',['details'=>$details]);
 
     }
 }
