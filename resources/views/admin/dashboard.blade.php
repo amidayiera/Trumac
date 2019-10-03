@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-lg-5">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">ADMIN Dashboard</div>
@@ -10,6 +10,7 @@
                 <p>you are logged in as an ADMIN</p>
                 {{-- <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+             
                             {{ Auth::admins()->username }} <span class="caret"></span>
                         </a>
       

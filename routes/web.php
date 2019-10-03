@@ -19,12 +19,21 @@ Route::get('/', 'PagesController@index');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-    Route::prefix('admin')->group(function() {
-        Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-        Route::post('/login', 'Auth\AdminLoginController@Login')->name('admin.login.submit');
-        Route::get('/', 'AdminController@index')->name('admin.dashboard');
-    });
 
 Route::get('/products','productController@showProducts');
 
 Route::get('/prodMaster/{id}','productController@showProductsById');
+
+Route::prefix('admin')->group(function() {
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@Login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
+
+Route::get('/', 'PagesController@index'); 
+ 
+Route::get('/about','PagesController@about');
+Route::get('/services','PagesController@services');
+
+ Route::resource('posts', 'PostsController');
+ 

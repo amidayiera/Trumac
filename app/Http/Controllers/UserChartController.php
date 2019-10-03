@@ -16,6 +16,7 @@ class UserChartController extends Controller
      */
     public function index()
     {   
+
         // $pulses= UserChart::all(); 
         $borderColors = [
             "rgba(244,67,54, 1.0)",
@@ -66,7 +67,7 @@ class UserChartController extends Controller
     
 
       
-    return view('users.users', [ 'usersChart' => $usersChart ] );
+    return view('users', [ 'usersChart' => $usersChart ] );
 
         // $users =DB::select('select * from users');
         // return view('users.users',['users'=>$users]);

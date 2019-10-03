@@ -1,4 +1,4 @@
-<html>
+{{-- <html>
 <head>
    <title> </title>
    <link href="{{ asset('css/app.css')}}" rel="stylesheet">
@@ -27,11 +27,13 @@
                 </div>
               </li>
             </ul>
-  </nav>
-  <body>
+          </nav> --}}
+            {{-- <body> --}}
+
+@extends('layouts.app')
+
+@section('content')
     @foreach($details as $detail)
-       
-   
         <div class="row">
             <div class="col-md-3">
                 <img src="{{asset($detail->image)}}" width="450px" height="450px">
@@ -54,6 +56,7 @@
                 <h4>{{ $detail->description }}</h4>
             
         </div>
-     @endforeach
-  </body>
-</html> 
+     @endforeach    
+@endsection
+  {{-- </body>
+</html>  --}}

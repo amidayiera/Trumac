@@ -20,7 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar fixed-top ">
+  <nav class="navbar navbar-expand-md navbar fixed-top navbar navbar-light" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="/">TRUMAC WATERS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
           <a class="nav-link" href="#">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link" href="/products">Products</a>
         </li>
           @guest
           <li class="nav-item">

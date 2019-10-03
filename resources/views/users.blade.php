@@ -10,6 +10,7 @@
                     {!! $usersChart->container() !!}
            
                 </div>
+                
             </div>
         </div>
         <a href="devices">VIEW DETAILS3</a>

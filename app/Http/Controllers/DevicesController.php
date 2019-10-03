@@ -9,8 +9,9 @@ class DevicesController extends Controller
 {
     public function index(){
         $users =DB::select('select * from users');
-        return view('devices.index',['users'=>$users]);
+        return view('devices',['users'=>$users]);
         // $devices = \App\Device::all();
         // return view('users.users',compact('devices'));
     }
 }
+

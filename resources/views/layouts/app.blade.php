@@ -14,5 +14,12 @@
         @include('includes.navbar')
         @yield('content')
     {{-- </div> --}}
+    
+    {{-- @include('inc.navbar')
+    <br>
+    <br>
+<div class='container'>
+  @include('inc.messages')
+    @yield('content') --}}
 </body> 
 </html>
