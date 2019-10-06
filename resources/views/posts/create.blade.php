@@ -9,6 +9,7 @@
       {{Form::text('name','',['class' => 'form-control','placeholder'=>'Name'])}}
          </div>
 
+
          <div class="form-group">
             {{Form::label('purchase_price','Purchase Price')}}
             {{Form::number('purchase_price','',['class' => 'form-control','placeholder'=>'Purchase Price'])}}
