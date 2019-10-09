@@ -54,8 +54,7 @@ class PostsController extends Controller
             'name'=>'required',
             'purchase_price'=>'required',
             'refill_price'=>'required',
-            'image'=>'image|nullable|max:1999',
-            'comments'=>'required'
+            'image'=>'image|nullable|max:1999'
         ]);
        //Handle file upload
        if($request->hasFile('image')){
@@ -79,7 +78,7 @@ class PostsController extends Controller
         $post->purchase_price=$request->input('purchase_price');
         $post->refill_price=$request->input('refill_price');
         $post->image=$fileNameToStore;
-        $post->comments= $request-> input('comments');
+        // $post->comments= $request-> input('comments');
         $post->save();
         return redirect('/posts')->with ('success','Product Uploaded');
     }
@@ -122,7 +121,7 @@ class PostsController extends Controller
             'name'=>'required',
             'purchase_price'=>'required',
             'refill_price'=>'required',
-            'comments'=>'required'
+            // 'comments'=>'required'
         ]);
         //Handle file upload
        if($request->hasFile('image')){
@@ -136,7 +135,7 @@ class PostsController extends Controller
          $fileNameToStore=$filename.'_'.time().'.'.$extension;
          //Upload Image
          $path=$request->file('image')->storeAs('public/images',$fileNameToStore);
-    }
+        }
     
        
         //Update post
@@ -147,7 +146,7 @@ class PostsController extends Controller
         if($request->hasFile('image')){
             $post->image=$fileNameToStore;
         }
-        $post->comments= $request-> input('comments');
+        // $post->comments= $request-> input('comments');
         $post->save();
         return redirect('/posts')->with ('success','Product Updated');
     }

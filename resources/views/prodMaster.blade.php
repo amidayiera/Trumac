@@ -38,20 +38,18 @@
             <div class="col-md-3">
                 <img src="{{asset($detail->image)}}" width="450px" height="450px">
             </div>
-            <div class="col-md-9" align="center">
+            <div class="col-md-9" text-align="center">
                     <br><br><br><br>
-            <h1 align="center">{{ $detail->name }}</H1>
+            <h1 text-align="center">{{ $detail->name }}</H1>
                         <br><br><br>
-              <h3 align="center">KSH/ {{ $detail->price }}</h3>
+              <h3 text-align="center">KSH/ {{ $detail->price }}</h3>
               <br><br><br>
               <button type="button" class="btn btn-outline-danger">Add To Cart</button>
               <button type="button" class="btn btn-outline-Success" >Buy  Now</button>
-              
-              
             </div>
         </div>
         
-            <div class="jumbotron" align="center">
+            <div class="jumbotron" text-align="center">
                 <h1> Description:</h1>
                 <h4>{{ $detail->description }}</h4>
             
