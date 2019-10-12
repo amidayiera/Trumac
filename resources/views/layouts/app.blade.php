@@ -10,16 +10,12 @@
     <title>{{config('app.name', 'Trumac Waters')}}</title>
 </head>
 <body>
-     <div class="container"> 
-        @include('includes.navbar')
-        @yield('content')
-     </div> 
-    
      @include('includes.navbar')
     <br>
     <br>
 <div class='container'>
   @include('includes.messages')
     @yield('content') 
+</div>
 </body> 
 </html>

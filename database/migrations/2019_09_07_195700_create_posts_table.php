@@ -8,7 +8,7 @@ class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *git commit -a -m
      * @return void
      */
     public function up()

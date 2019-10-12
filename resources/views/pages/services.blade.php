@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
        <h1>services</h1>
        {{-- @if(count($services)>0)

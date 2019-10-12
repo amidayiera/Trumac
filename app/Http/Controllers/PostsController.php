@@ -28,7 +28,7 @@ class PostsController extends Controller
         //to limit the values
   //$posts= Post::orderBy('title','desc')->take(1)->get();
       //pagination
-      $posts= Post::orderBy('name','desc')->paginate(10);
+      $posts= Post::orderBy('created_at','desc')->paginate(10);
   return view('posts.index')->with('posts',$posts);
     }
 #

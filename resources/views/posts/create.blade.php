@@ -24,10 +24,10 @@
    </div>
    
 
-   {{-- <div class="form-group">
-      {{Form::label('comments','Comments')}}
-      {{Form::textarea('comments','',['class' => 'form-control','placeholder'=>'Comment Text'])}}
-   </div> --}}
+    <div class="form-group">
+      {{Form::label('description','Description')}}
+      {{Form::textarea('description','',['class' => 'form-control','placeholder'=>'Description Text'])}}
+   </div> 
    {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
                   </div>

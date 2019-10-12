@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
 
 <div class="container mt-lg-5">
 <h1>Water products</h1>
@@ -10,14 +9,14 @@
    <div class="card card body bg-light ">
        <div class="row">
            <div class="col-md-4 col-sm-4">
-               <img style="width:100%"  scr="{{$post->image}}">
+                <img style="width:100%" src="{{ asset('storage/images/' . $post->image) }}">
            </div>
            <div class="col-md-8 col-sm-8">
         <h3><a href="/posts/{{$post->id}}">{{$post->name}}</a></h3>
         <small>Written on {{$post->created_at}}</small>
            </div>
        </div>
-    </div><br>
+   </div><br>
    @endforeach
    {{$posts->links()}}
 @else
