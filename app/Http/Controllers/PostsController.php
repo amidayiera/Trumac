@@ -31,7 +31,7 @@ class PostsController extends Controller
       $posts= Post::orderBy('name','desc')->paginate(10);
   return view('posts.index')->with('posts',$posts);
     }
-
+#
     /**
      * Show the form for creating a new resource.
      *

@@ -22,6 +22,7 @@
       {{Form::label('image','Select image to upload')}}<br>
       {{Form::file('image')}}
    </div>
+   
 
    {{-- <div class="form-group">
       {{Form::label('comments','Comments')}}
