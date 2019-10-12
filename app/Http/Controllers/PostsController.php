@@ -78,7 +78,7 @@ class PostsController extends Controller
         $post->purchase_price=$request->input('purchase_price');
         $post->refill_price=$request->input('refill_price');
         $post->image=$fileNameToStore;
-        // $post->comments= $request-> input('comments');
+        $post->description= $request-> input('description');
         $post->save();
         return redirect('/posts')->with ('success','Product Uploaded');
     }
@@ -121,7 +121,7 @@ class PostsController extends Controller
             'name'=>'required',
             'purchase_price'=>'required',
             'refill_price'=>'required',
-            // 'comments'=>'required'
+            'description'=>'required'
         ]);
         //Handle file upload
        if($request->hasFile('image')){
@@ -146,7 +146,7 @@ class PostsController extends Controller
         if($request->hasFile('image')){
             $post->image=$fileNameToStore;
         }
-        // $post->comments= $request-> input('comments');
+     $post->description= $request-> input('description');
         $post->save();
         return redirect('/posts')->with ('success','Product Updated');
     }

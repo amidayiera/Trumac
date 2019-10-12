@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('name');
             $table->integer('purchase_price');
             $table->integer('refill_price');
-            // $table->mediumText('comments');
+         $table->mediumText('description');
             $table->timestamps();
         });
     }
