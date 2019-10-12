@@ -14,7 +14,7 @@
            </div>
            <div class="col-md-8 col-sm-8">
         <h3><a href="/posts/{{$post->id}}">{{$post->name}}</a></h3>
-        {{-- <small>Written on {{$post->created_at}}</small> --}}
+        <small>Written on {{$post->created_at}}</small>
            </div>
        </div>
     </div><br>
