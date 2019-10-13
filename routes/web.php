@@ -25,13 +25,14 @@ Route::get('/products','productController@showProducts');
 Route::get('/prodMaster/{id}','productController@showProductsById');
 
 Route::prefix('admin')->group(function() {
-    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'Auth\AdminLoginController@Login')->name('admin.login.submit');
-    Route::get('/home', 'AdminController@index')->name('admin.dashboard');
+Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+Route::post('/login', 'Auth\AdminLoginController@Login')->name('admin.login.submit');
+Route::get('/home', 'AdminController@index')->name('admin.dashboard');
 });
  
 Route::get('/about','PagesController@about');
 Route::get('/services','PagesController@services');
 
  Route::resource('posts', 'PostsController');
- 
+ Route::get('users', 'UserChartController@index');
+Route::get('devices', 'DevicesController@index');

@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
+   <style>
+   table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+   </style>
 </head>
 <body>
  
@@ -9,13 +26,13 @@
 <table style="border:1px solid black">
         <tr style="padding:15px">
 
-            <td>id</td>
-            <td>name</td>
-            <td>email</td>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
           
-            <td>Password</td>
-            <td>created_at</td>
-            <td>updated_at</td>
+            <th>Password</th>
+            <th>created_at</th>
+            <th>updated_at</th>
 
         </tr>
         @foreach($users as $value)
@@ -27,30 +44,12 @@
         <td>{{$value->password}}</td>
         <td>{{$value->created_at}}</td>
         <td>{{$value->updated_at}}</td>
-        <td><a href=""><button>DELETE</a>&nbsp;<a href=""><button>EDIT</a></td>
+        <td><p>
+            <input type="button" value="Delete"
+            onclick="document.getElementById('myTable').deleteRow(0)">
+            {{-- </p><a href=""><button>DELETE</a>&nbsp;<a href=""><button>EDIT</a></td> --}}
        </tr>
         @endforeach
     </table>
-
- 
-{{-- @foreach ($devices as $device)
-<li> {{ $device}}  </li>
-@endforeach
- 
-<h1>Only Names Of Devices</h1>
- 
-@foreach ($devices as $device)
- 
-<li> {{ $device->name}}  </li>
- 
-@endforeach
- 
-<h1>Only Description Of Devices</h1>
- 
-@foreach ($devices as $device)
- 
-<li> {{ $device->description}}  </li>
- 
-@endforeach --}}
     
 </body>
