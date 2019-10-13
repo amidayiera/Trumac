@@ -1,4 +1,4 @@
-{{-- <html>
+<html>
 <head>
    <title> </title>
    <link href="{{ asset('css/app.css')}}" rel="stylesheet">
@@ -28,27 +28,23 @@
               </li>
             </ul>
   </nav>
-<h1 class="jumbotron text-center">Our Products</h1> / --}}
-
-@extends('layouts.app')
-
-@section('content')
+  <h1 text-align="center" class="jumbotron">Our Products</h1> 
   <div class="container">
-    <p>this is the products page</p>
    @foreach($bottles as $bott) 
-      <div class="text-center">
+  
+      <div text-align="center">
           <div class="row"> 
             <div class="col-sm-3">
-              <img class="img-thumbnail"src = "{{ asset($bott->image) }}" width="300px" height="400px"> 
+            <a href="{{ url('prodMaster', $bott->id) }}"><img class="img-thumbnail"src = "{{ asset($bott->image) }}" width="300px" height="400px"></a> 
             </div>  
             <div class="col-sm-9">
-              <h1 class="text-center">{{ $bott->name }}</H1>
-              <h3 class="text-center">KSH/={{ $bott->price }}</h3>
-              <a href="{{ url('prodMaster', $bott->productID) }}"><button type="button" class="btn btn-outline-danger">Add To Cart</button></a>
-              <button type="button" class="btn btn-outline-Success" >Buy  Now</button>
+              <h1 text-align="center">{{ $bott->name }}</H1>
+              <h3 text-align="center">KSH/={{ $bott->purchase_price }}</h3>
+              <!--ADD KEVINS ADD TO CART LINK HERE--><button type="button" class="btn btn-outline-danger">Add To Cart</button>
+              <a href="{{ url('prodMaster', $bott->id) }}"><button type="button" class="btn btn-outline-Success" >Buy  Now</button></a>
               <button class="btn btn-outline-info">Request Refill</button>
               <br><br>
-              <h4>{{$bott->description}}</h4>
+              <h4>{{$bott->refill_price}}</h4>
             </div>
           </div>
 
@@ -58,4 +54,3 @@
   </div> 
   </body>
 </html> 
-{{-- @endsection --}}
