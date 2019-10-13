@@ -32,10 +32,7 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/posts">Posts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/products">Products</a>
+          <a class="nav-link" href="/posts">Products</a>
         </li>
           @guest
           <li class="nav-item">
