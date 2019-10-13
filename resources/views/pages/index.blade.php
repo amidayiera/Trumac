@@ -3,7 +3,7 @@
 @section('content')
     <div class="home">
         <img src="../images/water1.jpg" alt="">
-        <div class="content">
+        <div class="callToAction" float="left" display="inline-block">
             <h6 class="slogan">Get your water refills<br> and replacements <br>at the click of a button!</h6>
             <button class="btn-primary order">order now</button>
             <h6 class="contacts">Telephone: 0724678912

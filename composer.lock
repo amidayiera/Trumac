@@ -210,7 +210,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.29"
+                "php": "^7.2"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^6.0",
@@ -990,7 +990,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.29",
+                "php": "^7.2",
                 "psr/log": "^1.0.1"
             },
             "provide": {
@@ -4686,7 +4686,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.29",
+                "php": "^7.2",
                 "sebastian/object-reflector": "^1.1.1",
                 "sebastian/recursion-context": "^3.0"
             },
@@ -4927,7 +4927,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.29"
+                "php": "^7.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.2"
