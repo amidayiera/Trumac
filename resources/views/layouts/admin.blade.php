@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,6 +83,7 @@ function closeNav() {
   document.getElementById("main").style.marginLeft= "0";
 }
 </script>
+@include('includes.adminBar')
     <main class="py-4">
       @yield('content')
   </main>

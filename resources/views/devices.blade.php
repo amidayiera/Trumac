@@ -1,7 +1,12 @@
+@include('includes.adminBar')
 <!DOCTYPE html>
 <html>
 <head>
    <style>
+      /* body{
+        background:url(/images/water.jpg);
+        background-size: cover;
+      } */
    table {
   border-collapse: collapse;
   width: 100%;
@@ -9,22 +14,40 @@
 
 th, td {
   text-align: left;
-  padding: 8px;
+  padding: 10px;
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: white}
 
 th {
-  background-color: #4CAF50;
+  background-color:	#4169E1;
   color: white;
+  font-size:120%;
+}
+Table{
+    /* width:20%; */
+    margin-left: 10%;
+    width:80%;
+
+}
+h1{
+    margin-left: 20%;
+    width:20%;
+    background-color:white;
+    
+}
+head{
+  width:80%;
 }
    </style>
 </head>
 <body>
- 
-<h1>All Information About   Users</h1>
-<table style="border:1px solid black">
-        <tr style="padding:15px">
+ <br> <br> <br>
+<h1>Trumac Customers</h1>
+<div class="Table">
+<table >
+        <tr style="padding: 20px">
 
             <th>id</th>
             <th>name</th>
@@ -45,11 +68,12 @@ th {
         <td>{{$value->created_at}}</td>
         <td>{{$value->updated_at}}</td>
         <td><p>
-            <input type="button" value="Delete"
-            onclick="document.getElementById('myTable').deleteRow(0)">
+            {{-- <input type="button" value="Delete"
+            onclick="document.getElementById('myTable').deleteRow(0)"> --}}
             {{-- </p><a href=""><button>DELETE</a>&nbsp;<a href=""><button>EDIT</a></td> --}}
        </tr>
         @endforeach
     </table>
+</div>
     
 </body>
