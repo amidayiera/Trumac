@@ -1,6 +1,26 @@
-@extends('layouts.app')
+{{-- @extends('admin.login') --}}
 
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<link rel="stylesheet" href="{{asset('css/app.css')}}">
+
+    <title>{{config('app.name', 'Trumac Waters')}}</title>
+</head>
+</body>
+
+<nav class="navbar navbar-expand-md navbar fixed-top navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/">TRUMAC WATERS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+    
+{{-- @section('content') --}}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -71,4 +91,6 @@
         </div>
     </div>
 </div>
-@endsection
+{{-- @endsection --}}
+</body>
+</html>

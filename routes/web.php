@@ -27,7 +27,7 @@ Route::get('/prodMaster/{id}','productController@showProductsById');
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@Login')->name('admin.login.submit');
-    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/home', 'AdminController@index')->name('admin.dashboard');
 });
  
 Route::get('/about','PagesController@about');
