@@ -1,6 +1,33 @@
 /* @import url(https://fonts.googleapis.com/css?family=Nunito); */
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css);
 
+.home{
+  background-color: #fcfcfc;
+}
+.home img{
+  height: 790px;
+}
+.callToAction button {
+  font-size:20px; 
+  margin: 20px 0;
+  /* text-align: center; */
+  text-transform: uppercase;
+  padding: 10px;
+  border: none;
+}
 .callToAction {
-  font-size: 300px;
+  margin-top: 20px      ;
+  font-size: 30px;
+  /* text-align: center; */
+}
+.navbar{
+  text-transform: uppercase;
+}
+.navbar li {
+  padding: 0 5px;
+  font-size: 27px;
+}
+a.navbar-brand{
+  font-size: 28px;
+  font-weight: bolder;
 }

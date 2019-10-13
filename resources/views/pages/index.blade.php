@@ -3,13 +3,13 @@
 @section('content')
     <div class="home">
         <img src="../images/water1.jpg" alt="">
-        <div class="callToAction" float="left" display="inline-block">
-            <h6 class="slogan">Get your water refills<br> and replacements <br>at the click of a button!</h6>
-            <button class="btn-primary order">order now</button>
-            <h6 class="contacts">Telephone: 0724678912
+        <div class="callToAction" style="display:inline-block;">
+            <h2 class="slogan">Get your water refills<br> and replacements <br>at the click of a button!</h2>
+            <button class="btn-primary order" >order now</button>
+            <h3 class="contacts">Telephone: 0724678912
                 <br>
                 Location: Nairobi west.
-            </h6>
+            </h3>
         </div>
     </div>
     {{-- <div class="parallax"></div>    --}}

@@ -11,6 +11,7 @@
             </div>  
             <div class="col-sm-9">
               <br>
+              <div style="padding-left:60px">
               <h1 text-align="center">{{ $bott->name }}</H1>
                 <br>
                 <!--ADD KEVINS ADD TO CART LINK HERE--><button type="button" class="btn btn-outline-danger">Add To Cart</button>
@@ -21,7 +22,7 @@
               <h4>Refill Price : Ksh {{$bott->refill_price}}</h4>
             </div>
           </div>
-
+          </div>
       </div>
       <br><br>
   @endforeach
