@@ -43,29 +43,26 @@ head{
    </style>
 </head>
 <body>
- <br> <br> <br>
- <br><br>
-<h1>Trumac Customers</h1>
+ <br> <br> <br><br><br>
+<h1>Trumac Orders</h1>
 <div class="Table">
 <table >
         <tr style="padding: 20px">
 
-            <th>id</th>
-            <th>name</th>
-            <th>email</th>
-          
-            <th>Password</th>
+            <th>Product ID</th>
+            <th>User ID</th>
+            <th>Product Name</th>
             <th>created_at</th>
             <th>updated_at</th>
 
         </tr>
-        @foreach($users as $value)
+        @foreach($orders as $value)
        <tr>
-        <td>{{ $value->id}}</td>
-        <td>{{ $value->name}}</td>
-        <td>{{ $value->email}}</td>
+        <td>{{ $value->product_id}}</td>
+        <td>{{ $value->user_id}}</td>
+        <td>{{ $value->product_name}}</td>
         
-        <td>{{$value->password}}</td>
+        <td>{{$value->product_price}}</td>
         <td>{{$value->created_at}}</td>
         <td>{{$value->updated_at}}</td>
         <td><p>
@@ -76,5 +73,5 @@ head{
         @endforeach
     </table>
 </div>
-{{-- <h4> <a href="users">VIEW GRAPH</a></h4> --}}
+    
 </body>

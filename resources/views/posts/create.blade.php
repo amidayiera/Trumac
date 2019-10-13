@@ -1,7 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.adminapp')
 
 @section('content')
-<div class="container mt-lg-5">
+
+
+<div class="container mt-lg-3"style="width:40%">
 <h1>Insert Product Detail</h1>
 {!! Form::open(['action' => 'PostsController@store','method'=>'POST','enctype'=>'multipart/form-data']) !!}
    <div class="form-group">
@@ -31,4 +33,4 @@
    {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
                   </div>
-@endsection
+                  @endsection

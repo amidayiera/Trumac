@@ -14,10 +14,10 @@ class CreateCartsTable extends Migration
     public function up()
     {
         Schema::create('carts', function (Blueprint $table) {
-            $table->integer('product id');
-            $table->integer('user id');
-            $table->string('product name');
-            $table->integer('product price');
+            $table->integer('product_id');
+            $table->integer('user_id');
+            $table->string('product_name');
+            $table->integer('product_price');
             $table->timestamps();
         });
     }

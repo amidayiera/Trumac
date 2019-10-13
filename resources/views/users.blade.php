@@ -12,11 +12,14 @@
         background:url(/images/water.jpg);
         background-size: cover;
       } */
+      h4{
+          margin-left:70%;
+      }
     </style>
 </head>
 <body>
     <div class="container">
-        <br><br><br>
+        <br><br><br><br><br>
         <h1>Graph of The Trumac Customers</h1>
         <div class="row">
             <div class="col-12">
