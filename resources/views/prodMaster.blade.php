@@ -1,59 +1,30 @@
-<html>
-<head>
-  <title> </title>
-  <link href="{{ asset('css/app.css')}}" rel="stylesheet">
-</head>
- <body> 
- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
- <!-- Brand -->
-     <a class="navbar-brand" href="#">Logo</a>
+@extends('layouts.app')
 
- <!-- Links -->
-           <ul class="navbar-nav">
-               <li class="nav-item">
-                 <a class="nav-link" href="#">Link x1</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Link 2</a>
-               </li>
-
-             <!-- Dropdown -->
-               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Dropdown link</a>
-               <div class="dropdown-menu">
-                 <a class="dropdown-item" href="#">Hey</a>
-                 <a class="dropdown-item" href="#">Link 2</a>
-                 <a class="dropdown-item" href="#">Link 3</a>
-               </div>
-             </li>
-           </ul>
- </nav>
- <body>
+@section('content')
    @foreach($details as $detail)
-      
-  
-       <div class="row">
+       <div class="row container mx-auto mt-lg-5">
            <div class="col-md-3">
-               <img src="{{asset($detail->image)}}" width="450px" height="450px">
+               <img src="{{asset('storage/images/' .$detail->image)}}" width="450px" height="500px">
            </div>
-           <div class="col-md-9" text-align="center">
+           <div style="text-align:center; padding-left: 250px;">
                    <br><br><br><br>
-           <h1 text-align="center">{{ $detail->name }}</H1>
-                       <br><br><br>
-             <h3 text-align="center">KSH/ {{ $detail->purchase_price }}</h3>
+           <h1 text-align="center">{{$detail->name }}</H1>
+
+            <br>
+             <h3 text-align="center">Purchase Price : Ksh{{ $detail->purchase_price }}</h3>
+             <h4>Refill Price : Ksh {{$detail->refill_price}}</h4>
              <br><br><br>
              <button type="button" class="btn btn-outline-danger">Add To Cart</button>
-             <button type="button" class="btn btn-outline-Success" >Buy  Now</button>
-             
-             
+             <button type="button" class="btn btn-outline-success" >Buy Now</button>
+             <br><br>
            </div>
        </div>
-       
-           <div class="jumbotron" text-align="center">
-               <h1> Description:</h1>
-               <h4>refill price :{{ $detail->refill_price }}</h4>
+{{--        
+           <div class=" container" style="background-color: #e3f2fd; padding:20px; margin-top:25px; text-align:center;">
+               <h1 style="text-transform: uppercase; text-decoration:underline; font-size:24px;"> Description</h1>
+               <h4>Purchase price : {{$detail->purchase_price}} ksh</h4>
+               <h4>Refill price :{{ $detail->refill_price }} ksh</h4>
            
-       </div>
+       </div> --}}
     @endforeach
- </body>
-</html> 
+@endsection

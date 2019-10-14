@@ -36,3 +36,4 @@ Route::get('/services','PagesController@services');
  Route::resource('posts', 'PostsController');
  Route::get('users', 'UserChartController@index');
 Route::get('devices', 'DevicesController@index');
+Route::get('orders','ordersController@index');

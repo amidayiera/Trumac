@@ -18,6 +18,45 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+      .dropbtn {
+        background-color:	#F0FFFF;
+        color: grey;
+        padding: 6px;
+        font-size: 28px;
+        border: none;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        font-size:15px;
+        border:none;
+        padding: 10px;
+        position: absolute;
+        background-color:#ffff;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #4169E1;}
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: #F0FFFF;}
+      </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar fixed-top navbar navbar-light" style="background-color: #e3f2fd;">
@@ -32,10 +71,22 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/posts">Products</a>
+          {{-- <a class="nav-link" href="/posts">Products</a> --}}
+          <div class="dropdown">
+            <button class="dropbtn">Products</button>
+            <div class="dropdown-content">
+              <a class="nav-link" href="/posts">Posts</a>
+              <a class="nav-link" href="/posts/create">Add posts</a>
+            
+            </div>
+          </div>
+          
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/users">View Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/orders">View Orders</a>
           </li>
           @guest
           <li class="nav-item">
