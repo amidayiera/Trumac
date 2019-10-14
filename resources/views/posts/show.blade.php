@@ -1,7 +1,7 @@
 @extends('layouts.adminapp')
 
 @section('content')
-    <div class="container mt-lg-5 m">
+    <div class="container mt-lg-5 ">
         <a href="/posts" class="btn btn-primary mb-lg-3">Go Back</a><br>
 
         <img style="width:400px; height:400px; " src="{{ asset('storage/images/' . $post->image) }}">

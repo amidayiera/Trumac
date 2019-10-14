@@ -3,6 +3,7 @@
 @section('content')
    @foreach($details as $detail)
        <div class="row container mx-auto mt-lg-5">
+            
            <div class="col-md-3">
                <img src="{{asset('storage/images/' .$detail->image)}}" width="450px" height="500px">
            </div>
@@ -16,8 +17,11 @@
              <br><br><br>
              <button type="button" class="btn btn-outline-danger">Add To Cart</button>
              <button type="button" class="btn btn-outline-success" >Buy Now</button>
+             <br><br><br><br>
+             <button type="button" class="btn btn-outline-primary text-justify" >Go Back</button>
              <br><br>
            </div>
+           
        </div>
 {{--        
            <div class=" container" style="background-color: #e3f2fd; padding:20px; margin-top:25px; text-align:center;">

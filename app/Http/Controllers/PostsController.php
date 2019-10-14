@@ -121,7 +121,8 @@ class PostsController extends Controller
             'name'=>'required',
             'purchase_price'=>'required',
             'refill_price'=>'required',
-            'description'=>'required'
+            'image'=>'required'
+            // 'description'=>'required'
         ]);
         //Handle file upload
        if($request->hasFile('image')){

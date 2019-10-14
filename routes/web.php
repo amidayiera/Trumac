@@ -28,12 +28,13 @@ Route::prefix('admin')->group(function() {
 Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/login', 'Auth\AdminLoginController@Login')->name('admin.login.submit');
 Route::get('/home', 'AdminController@index')->name('admin.dashboard');
+Route::get('/users', 'UserChartController@index');
+Route::get('/devices', 'DevicesController@index');
+Route::get('/orders','ordersController@index');
 });
  
 Route::get('/about','PagesController@about');
 Route::get('/services','PagesController@services');
 
  Route::resource('posts', 'PostsController');
- Route::get('users', 'UserChartController@index');
-Route::get('devices', 'DevicesController@index');
-Route::get('orders','ordersController@index');
+ 

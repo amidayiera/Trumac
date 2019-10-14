@@ -9,3 +9,4 @@ class Admin extends Authenticatable{
 
     //
 }
+

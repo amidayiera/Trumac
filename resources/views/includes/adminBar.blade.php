@@ -51,7 +51,7 @@
         display: block;
       }
       
-      .dropdown-content a:hover {background-color: #4169E1;}
+      .dropdown-content a:hover {background-color:#e3f2fd;}
       
       .dropdown:hover .dropdown-content {display: block;}
       
@@ -73,20 +73,20 @@
         <li class="nav-item">
           {{-- <a class="nav-link" href="/posts">Products</a> --}}
           <div class="dropdown">
-            <button class="dropbtn">Products</button>
+            <button class="dropbtn">PRODUCTS</button>
             <div class="dropdown-content">
-              <a class="nav-link" href="/posts">Posts</a>
-              <a class="nav-link" href="/posts/create">Add posts</a>
+              <a class="nav-link" href="/posts">view Products</a>
+              <a class="nav-link" href="/posts/create">Create new Product</a>
             
             </div>
           </div>
           
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/users">View Customers</a>
+            <a class="nav-link" href="/admin/devices">Customers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/orders">View Orders</a>
+            <a class="nav-link" href="/admin/orders">Orders</a>
           </li>
           @guest
           <li class="nav-item">
@@ -103,7 +103,7 @@
                   {{ Auth::user()->name }} <span class="caret"></span>
               </a>
             
-              <div class="dropdown-menu dropdown-menu-right text-success" aria-labelledby="navbarDropdown">
+              <div class="dropdown-content dropdown-menu-right text-success" aria-labelledby="navbarDropdown">
                 <li> 
                 <a class="dropdown-item text-success" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
@@ -116,6 +116,11 @@
                   </form>
                 </li>
               </div>
+              <div class="dropdown-content">
+                  <a class="nav-link" href="/admin/posts">Posts</a>
+                  <a class="nav-link" href="/admin/posts/create">Add posts</a>
+                
+                </div>
           </li>
       @endguest
         

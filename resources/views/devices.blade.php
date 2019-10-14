@@ -21,9 +21,11 @@ tr:nth-child(even){background-color: #f2f2f2}
 tr:nth-child(odd){background-color: white}
 
 th {
-  background-color:	#4169E1;
-  color: white;
-  font-size:120%;
+  background-color:	#e3f2fd;
+  color: #7e8681;
+  font-size:20px;
+  font-weight:500;
+  text-transform: uppercase;
 }
 Table{
     /* width:20%; */
@@ -54,9 +56,9 @@ head{
             <th>name</th>
             <th>email</th>
           
-            <th>Password</th>
-            <th>created_at</th>
-            <th>updated_at</th>
+            {{-- <th>Password</th> --}}
+            <th>created at</th>
+            <th>updated at</th>
 
         </tr>
         @foreach($users as $value)
@@ -65,14 +67,14 @@ head{
         <td>{{ $value->name}}</td>
         <td>{{ $value->email}}</td>
         
-        <td>{{$value->password}}</td>
+        {{-- <td>{{$value->password}}</td> --}}
         <td>{{$value->created_at}}</td>
         <td>{{$value->updated_at}}</td>
-        <td><p>
+        {{-- <tr>
             {{-- <input type="button" value="Delete"
             onclick="document.getElementById('myTable').deleteRow(0)"> --}}
-            {{-- </p><a href=""><button>DELETE</a>&nbsp;<a href=""><button>EDIT</a></td> --}}
-       </tr>
+            {{-- </p><a href=""><button>DELETE</a>&nbsp;<a href=""><button>EDIT</a></td> 
+       </tr> --}}
         @endforeach
     </table>
 </div>

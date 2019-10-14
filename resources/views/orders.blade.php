@@ -21,9 +21,11 @@ tr:nth-child(even){background-color: #f2f2f2}
 tr:nth-child(odd){background-color: white}
 
 th {
-  background-color:	#4169E1;
-  color: white;
-  font-size:120%;
+  background-color:	#e3f2fd;
+  color: #7e8681;
+  font-size:20px;
+  font-weight:500;
+  text-transform: uppercase;
 }
 Table{
     /* width:20%; */
@@ -52,8 +54,8 @@ head{
             <th>Product ID</th>
             <th>User ID</th>
             <th>Product Name</th>
-            <th>created_at</th>
-            <th>updated_at</th>
+            <th>created at</th>
+            <th>updated at</th>
 
         </tr>
         @foreach($orders as $value)
