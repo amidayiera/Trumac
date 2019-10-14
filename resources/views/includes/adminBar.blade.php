@@ -73,7 +73,8 @@
         <li class="nav-item">
           {{-- <a class="nav-link" href="/posts">Products</a> --}}
           <div class="dropdown">
-            <button class="dropbtn">PRODUCTS</button>
+            <button class="dropbtn" style="background-color:#e3f2fd;
+            font-size: 27px;">PRODUCTS</button>
             <div class="dropdown-content">
               <a class="nav-link" href="/posts">view Products</a>
               <a class="nav-link" href="/posts/create">Create new Product</a>
