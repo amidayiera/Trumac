@@ -7,7 +7,7 @@
 .home img{
   height: 790px;
 }
-.callToAction button {
+.callToAction a {
   font-size:20px; 
   margin: 20px 0;
   /* text-align: center; */
