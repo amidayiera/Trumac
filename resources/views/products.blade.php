@@ -10,7 +10,7 @@
             <a href="{{ url('prodMaster', $bott->id) }}"><img class="img-thumbnail"src = "{{ asset('storage/images/' .$bott->image) }}" width="250px" height="400px"></a> 
             </div>  
             <div class="col-sm-9">
-<<<<<<< HEAD
+{{-- <<<<<<< HEAD
               <h1 text-align="center">{{ $bott->name }}</H1>
               <h3 text-align="center">KSH/={{ $bott->purchase_price }}</h3>
               <a href="cart.php"><button type="button" class="btn btn-outline-danger">Add To Cart</button>
@@ -18,8 +18,7 @@
               <button class="btn btn-outline-info">Request Refill</button>
               <br><br>
               <h4>{{$bott->refill_price}}</h4>
-            </div>
-=======
+            </div> --}}
               <br>
               <div style="padding-left:60px">
               <h1 text-align="center" color="#00078a">{{ $bott->name }}</H1>
@@ -30,8 +29,7 @@
                 <button class="btn btn-outline-info">Request Refill</button>
               </div>
           </div>
->>>>>>> f5f1ca9b81cd834e83d916d9fee501bd0fee644f
-          </div>
+        </div>
       </div>
       <br><br>
   @endforeach
