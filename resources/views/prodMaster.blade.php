@@ -2,33 +2,29 @@
 
 @section('content')
    @foreach($details as $detail)
-       <div class="row container mx-auto mt-lg-5">
-            
-           <div class="col-md-3">
-               <img src="{{asset('storage/images/' .$detail->image)}}" width="450px" height="500px">
-           </div>
-           <div style="text-align:center; padding-left: 250px;">
-                   <br><br><br><br>
-           <h1 text-align="center">{{$detail->name }}</H1>
-
-            <br>
-             <h3 text-align="center">Purchase Price : Ksh{{ $detail->purchase_price }}</h3>
-             <h4>Refill Price : Ksh {{$detail->refill_price}}</h4>
-             <br><br><br>
-             <button type="button" class="btn btn-outline-danger">Add To Cart</button>
-             <button type="button" class="btn btn-outline-success" >Buy Now</button>
-             <br><br><br><br>
-             <button type="button" class="btn btn-outline-primary text-justify" >Go Back</button>
-             <br><br>
-           </div>
-           
-       </div>
-{{--        
+   <div class="row">
+            <div class="col-md-3">
+                <img src="{{asset($detail->image)}}" width="450px" height="450px">
+            </div>
+            <div class="col-md-9" align="center">
+                    <br><br><br><br>
+            <h1 align="center">{{ $detail->name }}</H1>
+                        <br><br><br>
+              <h3 align="center">KSH/ {{ $detail->purchase_price }}</h3>
+              <br><br><br>
+              <a href="{{ url('add-to-cart/'.$detail->id) }}"><button type="button" class="btn btn-outline-danger">Add To Cart</button></a>
+              <button type="button" class="btn btn-outline-Success" >Buy  Now</button>
+              
+              
+            </div>
+        </div>
+               
            <div class=" container" style="background-color: #e3f2fd; padding:20px; margin-top:25px; text-align:center;">
                <h1 style="text-transform: uppercase; text-decoration:underline; font-size:24px;"> Description</h1>
                <h4>Purchase price : {{$detail->purchase_price}} ksh</h4>
                <h4>Refill price :{{ $detail->refill_price }} ksh</h4>
            
-       </div> --}}
+       </div>
+
     @endforeach
 @endsection

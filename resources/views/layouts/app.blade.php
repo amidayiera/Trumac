@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <link rel="stylesheet" href="{{asset('css/app.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
     <title>{{config('app.name', 'Trumac Waters')}}</title>
 </head>

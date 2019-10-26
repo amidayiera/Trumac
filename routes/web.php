@@ -24,6 +24,14 @@ Route::get('/products','productController@showProducts');
 
 Route::get('/prodMaster/{id}','productController@showProductsById');
 
+Route::get('/cart','cartController@cart');
+
+Route::get('/add-to-cart/{id}','cartController@addToCart');
+
+Route::get('/update-cart','cartController@update');
+
+Route::get('/remove-from-cart','cartController@remove');
+
 Route::prefix('admin')->group(function() {
 Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 Route::post('/login', 'Auth\AdminLoginController@Login')->name('admin.login.submit');
