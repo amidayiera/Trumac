@@ -18,6 +18,7 @@
 {{-- <div class='container'> --}}
   @include('includes.messages')
     @yield('content') 
+    @yield('scripts')
 </div>
 </body> 
 </html>
