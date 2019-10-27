@@ -23,7 +23,7 @@ class AdminController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index() {
-        return view('posts.show');
+        return view('posts.create');
     }
 }
 

@@ -75,6 +75,7 @@
           <div class="dropdown">
             <button class="dropbtn" style="background-color:#e3f2fd;
             font-size: 27px;">PRODUCTS</button>
+            
             <div class="dropdown-content">
               <a class="nav-link" href="/posts">view Products</a>
               <a class="nav-link" href="/posts/create">Create new Product</a>
@@ -89,7 +90,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/admin/orders">Orders</a>
           </li>
-          @guest
+          {{-- @guest --}}
           {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
           </li>
@@ -98,15 +99,15 @@
                   <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
               </li>
           @endif --}}
-      @else
+      {{-- @else
           <li class="nav-item dropdown">
-              <a id="navbarDropdown" class="nav-link dropdown-toggle text-success href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              <a id="navbarDropdown" class="nav-link dropdown-toggle text-success" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                   {{ Auth::user()->name }} <span class="caret"></span>
               </a>
             
-              <div class="dropdown-content dropdown-menu-right text-success" aria-labelledby="navbarDropdown">
-                <li> 
-                <a class="dropdown-item text-success" href="{{ route('logout') }}"
+              <div class="dropdown-content dropdown-menu-right text-success" aria-labelledby="navbarDropdown"> --}}
+                <li class="nav-item"> 
+                <a class="dropdown-item text-primary" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                       {{ __('Logout') }} 
@@ -116,14 +117,14 @@
                       @csrf
                   </form>
                 </li>
-              </div>
+              {{-- </div>
               <div class="dropdown-content">
                   <a class="nav-link" href="/admin/posts">Posts</a>
                   <a class="nav-link" href="/admin/posts/create">Add posts</a>
                 
                 </div>
-          </li>
-      @endguest
+          </li> --}}
+      {{-- @endguest --}}
         
       </ul>
       <form class="form-inline my-2 my-lg-0">
