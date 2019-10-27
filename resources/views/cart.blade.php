@@ -36,6 +36,8 @@
                                  <td class="actions" data-th="">
                                     <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><i class="fa fa-refresh"></i></button>
                                     <button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i></button>
+                                    <a href=""class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}" onclick="return confirm('Are you sure you want to delete this course?')" class="edit btn btn-danger btn-sm">Delete</a> </td>
+
                                 </td>
                         </td>
                     </tr>
