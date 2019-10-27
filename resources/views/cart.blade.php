@@ -44,16 +44,18 @@
             @endif
         </tbody>
         <tfoot>
-            <tr class="visible-xs">
+            {{-- <tr class="visible-xs">
                 <td class="text-center"><strong>Total: Ksh{{ $total }}</strong></td>
-            </tr>
+            </tr> --}}
             <tr>
-            <td><a href="{{ url('/products') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-            <td colspan="2" class="hidden-xs"></td>
-            <td class="hidden-xs text-center"><strong>Total: Ksh{{ $total }}</strong></td>
-        </tr>
+                
+                <td colspan="3" class="hidden-xs"></td>
+                <td class="hidden-xs text-right"><strong>Total: Ksh{{ $total }}</strong></td>
+            </tr>
         </tfoot>
     </table>
+    <td><a href="{{ url('/products') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+<td><a href="{{ url('/products') }}" class="btn btn-primary float-right"><i class="fa fa-angle-right"></i> Checkout</a></td>
 </div>
 @endsection
 
