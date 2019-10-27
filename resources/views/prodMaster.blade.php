@@ -6,11 +6,11 @@
             <div class="col-md-3">
                 <img src="{{asset($detail->image)}}" width="450px" height="450px">
             </div>
-            <div class="col-md-9" align="center">
+            <div class="col-md-9" text-align="center">
                     <br><br><br><br>
-            <h1 align="center">{{ $detail->name }}</H1>
+            <h1 text-align="center">{{ $detail->name }}</H1>
                         <br><br><br>
-              <h3 align="center">KSH/ {{ $detail->purchase_price }}</h3>
+              <h3 text-align="center">KSH/ {{ $detail->purchase_price }}</h3>
               <br><br><br>
               <a href="{{ url('add-to-cart/'.$detail->id) }}"><button type="button" class="btn btn-outline-danger">Add To Cart</button></a>
               <button type="button" class="btn btn-outline-Success" >Buy  Now</button>
