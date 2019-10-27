@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('Title','Cart')
-<h1>Shopping Cart</h1>
+{{-- <h1>Shopping Cart</h1> --}}
 
 @section('content')
-<div class="container">
+<div class="container m">
     <table class="table table-hover table-condensed">
         <tbody>
         <thead>
@@ -34,8 +34,8 @@
                                 </td>
                                 <td data-th="Subtotal" class="text-center">Ksh {{ $details['price'] * $details['quantity'] }}</td>
                                  <td class="actions" data-th="">
-                                    <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><i class="fa fa-refresh"></i></button>
-                                    <button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i></button>
+                                    <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><i class="fa fa-refresh"> Update Quantity</i></button>
+                                    <button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"> Delete</i></button>
                                     
                                 </td>
                         </td>
@@ -81,7 +81,7 @@
             e.preventDefault();
             var ele = $(this);
  
-            if(confirm("Are you sure")) {
+            if(confirm("Are you sure you want to delete this product?")) {
                 $.ajax({
                     url: '{{ url('remove-from-cart') }}',
                     method: "DELETE",
