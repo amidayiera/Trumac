@@ -3,7 +3,7 @@
 {{-- <h1>Shopping Cart</h1> --}}
 
 @section('content')
-<div class="container m">
+<div class="container mt-lg-5">
     <table class="table table-hover table-condensed">
         <tbody>
         <thead>
