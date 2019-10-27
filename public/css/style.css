@@ -43,6 +43,7 @@
 }
 .cart-detail .count{
     color:#C2C2DC;
+    text-transform: capitalize;
 }
 .checkout{
     border-top:1px solid #d2d2d2;
@@ -88,7 +89,7 @@
 }
 @media screen and (max-width: 600px) {
     table#cart tbody td .form-control{
-        width:20%;
+        /* width:20%; */
         display: inline !important;
     }
     .actions .btn{
