@@ -54,8 +54,8 @@
             </tr>
         </tfoot>
     </table>
-    <td><a href="{{ url('/products') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-<td><a href="{{ url('/products') }}" class="btn btn-primary float-right"><i class="fa fa-angle-right"></i> Checkout</a></td>
+    <a href="{{ url('/products') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i> Continue Shopping</a>
+<a href="{{ url('/checkout') }}" class="btn btn-primary float-right"><i class="fa fa-angle-right"></i> Checkout</a>
 </div>
 @endsection
 
