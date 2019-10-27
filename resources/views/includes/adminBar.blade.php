@@ -67,9 +67,9 @@
 
     <div class="collapse navbar-collapse " id="navbarsExampleDefault">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        {{-- <li class="nav-item active">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
+        </li> --}}
         <li class="nav-item">
           {{-- <a class="nav-link" href="/posts">Products</a> --}}
           <div class="dropdown">
@@ -90,14 +90,14 @@
             <a class="nav-link" href="/admin/orders">Orders</a>
           </li>
           @guest
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
           </li>
           @if (Route::has('register'))
               <li class="nav-item">
                   <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
               </li>
-          @endif
+          @endif --}}
       @else
           <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle text-success href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
