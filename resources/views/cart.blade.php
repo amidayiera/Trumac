@@ -23,7 +23,7 @@
                         <td>
                             <div class="row">
                                 <div class="col-sm-3 hidden-xs">
-                                    <img src="{{$details['image']}}" width="100" height="100" class="img-responsive"/>
+                                    <img src="{{ asset('storage/images/'.$details['image'])}}" width="100" height="100" class="img-responsive"/>
                                 </div>
                                 <div class="col-sm-9 "> 
                                     <h5 >{{$details['name']}}</h5>
@@ -60,43 +60,41 @@
 </div>
 @endsection
 
-@section('scripts')
- 
- 
-    <script type="text/javascript">
- 
-        $(".update-cart").click(function (e) {
-           e.preventDefault();
- 
-           var ele = $(this);
- 
-            $.ajax({
-               url: '{{ url('update-cart') }}',
-               method: "patch",
-               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
-               success: function (response) {
-                   window.location.reload();
-               }
-            });
-        });
- 
-        $(".remove-from-cart").click(function (e) {
-            e.preventDefault();
-            var ele = $(this);
- 
-            if(confirm("Are you sure you want to delete this product?")) {
-                $.ajax({
-                    url: '{{ url('remove-from-cart') }}',
-                    method: "DELETE",
-                    data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
-                    success: function (response) {
-                        window.location.reload();
-                    }
-                });
-            }
-        });
- 
-    </script>
- 
-@endsection
 
+@section('scripts') 
+<script type="text/javascript">
+
+    $(".update-cart").click(function (e) {
+       e.preventDefault();
+
+       var ele = $(this);
+
+        $.ajax({
+           url: '{{ url('update-cart') }}',
+           method: "patch",
+           data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
+           success: function (response) {
+               window.location.reload();
+           }
+        });
+    });
+
+    $(".remove-from-cart").click(function (e) {
+        e.preventDefault();
+        var ele = $(this);
+
+        if(confirm("Are you sure you want to delete this product?")) {
+            $.ajax({
+                url: '{{ url('remove-from-cart') }}',
+                method: "DELETE",
+                data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
+                success: function (response) {
+                    window.location.reload();
+                }
+            });
+        }
+    });
+
+</script>
+
+@endsection
