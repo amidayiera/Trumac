@@ -24,6 +24,12 @@ Route::get('/products','productController@showProducts');
 
 Route::get('/prodMaster/{id}','productController@showProductsById');
 
+Route::get('/cart','cartController@cart');
+Route::get('/add-to-cart/{id}','cartController@addToCart');
+Route::patch('/update-cart','cartController@update');
+Route::delete('/remove-from-cart','cartController@remove');
+Route::get('/checkout','cartController@checkout');
+
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@Login')->name('admin.login.submit');
@@ -36,5 +42,5 @@ Route::prefix('admin')->group(function() {
 Route::get('/about','PagesController@about');
 Route::get('/services','PagesController@services');
 
- Route::resource('posts', 'PostsController');
+Route::resource('posts', 'PostsController');
  
