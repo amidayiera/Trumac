@@ -18,7 +18,7 @@
              <button type="button" class="btn btn-outline-danger">Add To Cart</button>
              <button type="button" class="btn btn-outline-success" >Buy Now</button>
              <br><br><br><br>
-             <a href="/products" class="btn btn-outline-primary text-justify" >Go Back</a>
+             <button type="button" class="btn btn-outline-primary text-justify" >Go Back</button>
              <br><br>
            </div>
            
