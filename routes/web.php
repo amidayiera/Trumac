@@ -28,6 +28,7 @@ Route::get('/cart','cartController@cart');
 Route::get('/add-to-cart/{id}','cartController@addToCart');
 Route::patch('/update-cart','cartController@update');
 Route::delete('/remove-from-cart','cartController@remove');
+Route::get('/checkout','cartController@checkout');
 
 Route::prefix('admin')->group(function() {
 Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

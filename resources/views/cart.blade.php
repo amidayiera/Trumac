@@ -30,9 +30,9 @@
                                 </div>
                                 <td data-th="Price">Ksh {{ $details['price'] }}</td>
                                 <td data-th="Quantity">
-                                    <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity" />
+                                    <input type="number" name="quantity" value="{{ $details['quantity'] }}" class="form-control quantity" />
                                 </td>
-                                <td data-th="Subtotal" class="text-center">Ksh {{ $details['price'] * $details['quantity'] }}</td>
+                                <td data-th="Subtotal" name="total" class="text-center">Ksh {{ $details['price'] * $details['quantity'] }}</td>
                                  <td class="actions" data-th="">
                                     <button class="btn btn-info btn-sm update-cart" data-id="{{ $id }}"><i class="fa fa-refresh"></i> Update Quantity</button>
                                     <button class="btn btn-danger btn-sm remove-from-cart" data-id="{{ $id }}"><i class="fa fa-trash-o"></i> Delete</button>
@@ -55,6 +55,7 @@
         </tfoot>
     </table>
     <a href="{{ url('/products') }}" class="btn btn-primary"><i class="fa fa-angle-left"></i> Continue Shopping</a>
+
 <a href="{{ url('/checkout') }}" class="btn btn-primary float-right">Checkout <i class="fa fa-angle-right"></i> </a>
 </div>
 @endsection

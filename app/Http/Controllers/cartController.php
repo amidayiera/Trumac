@@ -70,7 +70,6 @@ public function update(Request $request)
                 unset($cart[$request->id]);
                 session()->put('cart', $cart);
             }
- 
             session()->flash('success', 'Product removed successfully');
         }
     }

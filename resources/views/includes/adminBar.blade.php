@@ -105,7 +105,7 @@
               </a>
             
               <div class="dropdown-content dropdown-menu-right text-success" aria-labelledby="navbarDropdown">
-                <li> 
+                {{-- <li>  --}}
                 <a class="dropdown-item text-success" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">

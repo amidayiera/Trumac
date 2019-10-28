@@ -32,6 +32,9 @@
                     @endif
 
                     You are logged in!
+                    {{-- USER VIEW THEIR ORDERS --}}
+                    
+                    
                 </div>
             </div>
         </div>
